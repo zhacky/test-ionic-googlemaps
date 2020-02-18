@@ -57,7 +57,9 @@ export class HomePage implements OnInit {
         Environment.setEnv(
             {
                 API_KEY_FOR_BROWSER_RELEASE: 'AIzaSyC6zztxezHvFudNIgiEFhYOBFGSzBIQ8Gk',
-                API_KEY_FOR_BROWSER_DEBUG: 'AIzaSyC6zztxezHvFudNIgiEFhYOBFGSzBIQ8Gk'
+                API_KEY_FOR_BROWSER_DEBUG: 'AIzaSyC6zztxezHvFudNIgiEFhYOBFGSzBIQ8Gk',
+                API_KEY_FOR_ANDROID: 'AIzaSyC6zztxezHvFudNIgiEFhYOBFGSzBIQ8Gk',
+                GOOGLE_MAPS_ANDROID_API_KEY: 'AIzaSyC6zztxezHvFudNIgiEFhYOBFGSzBIQ8Gk'
             }
         );
 
@@ -91,8 +93,10 @@ export class HomePage implements OnInit {
             }
         };
         selected.forEach(place => {
+            const htmlMsg = `<strong>${place.name}</strong><br/><br/><strong>Address:</strong> ${place.address}<br/><br/><strong>Rating:</strong> ${place.rating}<br/><br/>Geo: ${place.lat},${place.long}`;
+            const msg = `${place.name}\nAddress: ${place.address}\nRating: ${place.rating}\nGeo: ${place.lat},${place.long}`;
             const marker: Marker = this.map.addMarkerSync({
-                title: place.name,
+                title: htmlMsg,
                 icon: 'blue',
                 animation: 'DROP',
                 position: {
@@ -102,7 +106,7 @@ export class HomePage implements OnInit {
             });
             marker.on(GoogleMapsEvent.MARKER_CLICK)
                 .subscribe(() => {
-                    const msg = `Address: ${place.address}\nRating: ${place.rating}`;
+
                     alert(msg);
                 });
         });
