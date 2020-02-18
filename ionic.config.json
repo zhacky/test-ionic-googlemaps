@@ -1,0 +1,7 @@
+{
+  "name": "bizMapp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
