@@ -11,9 +11,11 @@ import {Place} from './place';
 })
 export class HomePage implements OnInit {
 
+    hasFound: boolean;
     data: any;
     map: GoogleMap;
     places: Place[];
+    selected: Place[];
     currentLat: string;
     currentLong: string;
 
@@ -45,12 +47,14 @@ export class HomePage implements OnInit {
             return;
         }
         console.log(`Searching... ${searchString}`);
-        const selected = this.places.filter(({name}) => name.includes(searchString));
-        console.log(selected);
-        if (selected === undefined || selected.length <= 0) {
+        this.selected = this.places.filter(({name}) => name.includes(searchString));
+        console.log(this.selected);
+        if (this.selected === undefined || this.selected.length <= 0) {
+            this.hasFound = false;
             return;
         }
-        await this.loadCurrent(selected);
+        this.hasFound = true;
+        await this.loadCurrent(this.selected);
     }
 
     private async loadMap(selected: Place[]) {
