@@ -1,7 +1,8 @@
 {
   "name": "bizMapp",
   "integrations": {
-    "capacitor": {}
+    "capacitor": {},
+    "cordova": {}
   },
   "type": "angular"
 }

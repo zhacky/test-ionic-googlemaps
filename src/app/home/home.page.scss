@@ -8,6 +8,7 @@
   transform: translateY(-50%);
 }
 
+
 #container strong {
   font-size: 20px;
   line-height: 26px;
@@ -29,3 +30,12 @@
 ion-content ion-toolbar {
   --background: translucent;
 }
+
+#map_canvas {
+  height: 90%;
+  height: 800px;
+  width: 90%;
+  border: solid 1px #ccc;
+}
+
+
