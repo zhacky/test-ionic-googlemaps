@@ -98,8 +98,8 @@
     <plugin name="cordova-plugin-device" spec="2.0.2" />
     <plugin name="cordova-plugin-splashscreen" spec="5.0.2" />
     <plugin name="cordova-plugin-ionic-webview" spec="^4.0.0" />
-    <preference name="GOOGLE_MAPS_ANDROID_API_KEY" value="<API Key for Google Maps Android or Javascript>" />
-    <preference name="GOOGLE_MAPS_IOS_API_KEY" value="<API Key for Google Maps Android or Javascript>" />
+    <preference name="GOOGLE_MAPS_ANDROID_API_KEY" value="AIzaSyC6zztxezHvFudNIgiEFhYOBFGSzBIQ8Gk" />
+    <preference name="GOOGLE_MAPS_IOS_API_KEY" value="AIzaSyC6zztxezHvFudNIgiEFhYOBFGSzBIQ8Gk" />
     <plugin name="cordova-plugin-ionic-keyboard" spec="^2.0.5" />
     <allow-navigation href="http://localhost:8100" sessionid="df864ce2" />
 </widget>

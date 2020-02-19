@@ -10,7 +10,7 @@
                 <ion-searchbar search-icon="search-outline" (ionChange)="searchMapData($event.target.value)"
                                animated="true"></ion-searchbar>
               <ion-list  *ngIf="hasFound" style="background: #fff;">
-                <ion-item *ngFor="let place of selected">{{place.name}}</ion-item>
+                <ion-item *ngFor="let place of selected" (click)="selectListedItem($event)">{{place.name}}</ion-item>
               </ion-list>
             </div>
         </ion-buttons>

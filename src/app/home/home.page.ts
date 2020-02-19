@@ -60,10 +60,10 @@ export class HomePage implements OnInit {
     private async loadMap(selected: Place[]) {
         Environment.setEnv(
             {
-                API_KEY_FOR_BROWSER_RELEASE: '(API Key for Google Maps Android or Javascript)',
-                API_KEY_FOR_BROWSER_DEBUG: '(API Key for Google Maps Android or Javascript)',
-                API_KEY_FOR_ANDROID: '(API Key for Google Maps Android or Javascript)',
-                GOOGLE_MAPS_ANDROID_API_KEY: '(API Key for Google Maps Android or Javascript)'
+                API_KEY_FOR_BROWSER_RELEASE: 'AIzaSyC6zztxezHvFudNIgiEFhYOBFGSzBIQ8Gk',
+                API_KEY_FOR_BROWSER_DEBUG: 'AIzaSyC6zztxezHvFudNIgiEFhYOBFGSzBIQ8Gk',
+                API_KEY_FOR_ANDROID: 'AIzaSyC6zztxezHvFudNIgiEFhYOBFGSzBIQ8Gk',
+                GOOGLE_MAPS_ANDROID_API_KEY: 'AIzaSyC6zztxezHvFudNIgiEFhYOBFGSzBIQ8Gk'
             }
         );
 
